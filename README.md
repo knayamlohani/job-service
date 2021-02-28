@@ -4,8 +4,9 @@
 ```
 1 git clone https://github.com/knayamlohani/job-service.git
 2 cd job-service
-3 mvn clean install
-4 java -jar target/job-service-1.0.0.jar
+3 git checkout dev_v1
+4 mvn clean install
+5 java -jar target/job-service-1.0.0.jar
 ```
 
 
