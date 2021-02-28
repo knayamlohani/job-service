@@ -1,0 +1,39 @@
+server:
+  port: 9191
+  servlet:
+    contextPath: /job-service/api/v1
+  http2:
+    enabled: true
+
+
+spring:
+  datasource:
+    #    url: jdbc:h2:mem:JOB_SERVICE
+    driverClassName: org.h2.Driver
+    username: vdx_user
+    password: vdx_password
+    url: jdbc:h2:file:./database/JOB_SERVICE
+
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database: H2
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    open-in-view: false
+
+job:
+  process-pending-tasks:
+    poll-time: 1000
+    pool:
+      size: 3
+  count-stats:
+    poll-time: 10000
+  avg-time-stats:
+    poll-time: 10000
+  percentage-splitup-by-status-stats:
+    poll-time: 10000
+
+
