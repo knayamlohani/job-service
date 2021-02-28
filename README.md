@@ -83,6 +83,10 @@ pool size for parallel job processing
 frequency at which jobs run
 frequency at which statistics generation jobs run
 
+
+process pending job - runs every 1 sec(1000ms), pool size is kept 3 (so can process max 3 jobs at a time, can be updated to handle more for better processing)
+stats generation jobs - run every 10 sec(10000ms)
+
 ```
 
 
